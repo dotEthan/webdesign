@@ -1,0 +1,22 @@
+#test {
+  width: 100%;
+  height: 100vh;
+  color: $color1;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.testee {
+  width: 100%;
+  height: 50vh;
+  color: red;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
