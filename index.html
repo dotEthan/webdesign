@@ -15,21 +15,21 @@
 <body>
   <div class="contain">
     <div id="top" class="splash"> 
-      <div class="topbar">
-        <div class="topbar__texts">
-          <div class="topbar__text">Availability: Taking new clients</div>
-          <div class="topbar__text">306-590-0147 - 9am - 9pm</div>
-          <div class="topbar__text">estrauss2018@gmail.com</div>
-        </div>
-        <div class="topbar__socials">
-          <div class="topbar__social"><i class="fab fa-facebook-square"></i></div>
-          <div class="topbar__social"><i class="fab fa-twitter-square"></i></div>
-          <div class="topbar__social"><i class="fab fa-linkedin"></i></div>
-          <div class="topbar__social"><i class="fas fa-envelope-square"></i></div>
-        </div>
-      </div>
       <div class="nav">
-        <div class="logo">LOGO</div>
+        <div class="topbar">
+          <div class="topbar__texts">
+            <div class="topbar__text">Availability: Taking new clients</div>
+            <div class="topbar__text">306-590-0147 - 9am - 9pm</div>
+            <div class="topbar__text">estrauss2018@gmail.com</div>
+          </div>
+          <div class="topbar__socials">
+            <div class="topbar__social"><i class="fab fa-facebook-square"></i></div>
+            <div class="topbar__social"><i class="fab fa-twitter-square"></i></div>
+            <div class="topbar__social"><i class="fab fa-linkedin"></i></div>
+            <div class="topbar__social"><i class="fas fa-envelope-square"></i></div>
+          </div>
+        </div>
+        <div class="logo"></div>
         <ul class="nav__items">
           <li class="nav__item">Home</li>
           <li class="nav__item">Services</li>
@@ -37,7 +37,7 @@
         </ul>
       </div>
       <div class="hero">
-        <h1 class="hero__text">Tailored,<br/>Responsive<br />Web Design</h1>
+        <h1 class="hero__text">Tailored.<br/>Responsive.<br />Web Design.</h1>
         <!-- <h2 class="hero__text--sm">Your one stop shop for all your website needs</h2> -->
         <div class="hero__button"><button class="services__button">Services</button></div>
         <div class="hero__img"><img src="../images/heroimg.png" alt="A picture of the developers"></div>
@@ -48,17 +48,47 @@
         <h3 class="title">Services</h3>
         <div class="services">
           <div class="service">
+            <div class="service__icon__contain">
+              <div class="service__icon website"><i class="fas fa-drafting-compass"></i></div>
+            </div>
             <div class="service__text">Website design & SEO</div>
-            <div class="service__icon"><i class="fas fa-drafting-compass"></i></div>
           </div>
           <div class="service">
+            <div class="service__icon__contain">
+              <div class="service__icon social">
+                <div class="icon__text text--left left--one">Hello!</div>
+                <div class="icon__text text--left left--two">Ni Hao!</div>
+                <div class="icon__text text--left left--three">Hallo!</div>
+                <i class="far fa-comment"></i>
+              </div>
+            </div>
+            <div class="service__icon social second">
+              <div class="icon__text text--right right--one">Bonjour!</div>
+              <div class="icon__text text--right right--two">Hola!</div>
+              <div class="icon__text text--right right--three">Kia Ora!</div>
+              <i class="far fa-comment"></i>
+            </div>
             <div class="service__text">Social Media & Marketing</div>
-            <div class="service__icon social"><i class="far fa-comment"></i></div>
-            <div class="service__icon social second"><i class="far fa-comment"></i></div>
           </div>
           <div class="service">
-            <div class="service__text">Website Hosting & Maintence</div>
-            <div class="service__icon"><i class="fas fa-server"></i></div>
+            <div class="service__icon__contain">
+              <div class="service__icon host">
+                <div class="server__row row--one">
+                  <div class="light red red--one"></div>
+                  <div class="light green"></div>
+                </div>
+                <div class="server__row row--two">
+                  <div class="light red red--two"></div>
+                  <div class="light green"></div>
+                </div>
+                <div class="server__row row--three">
+                  <div class="light red red--three"></div>
+                  <div class="light green"></div>
+                </div>
+                <i class="fas fa-server"></i>
+              </div>
+            </div>
+            <div class="service__text">Website Hosting</div>
           </div>
         </div>
       </div>
@@ -129,7 +159,12 @@
     <div id="fact-slice" class="slice">
       <div class="facts">
         <div class="fact">
-          <div class="fact__icon stars"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+          <div class="fact__icon stars">
+            <div class="dots">
+              <div class="dot dot--one"></div><div class="dot dot--two"></div><div class="dot dot--three"></div><div class="dot dot--four"></div><div class="dot dot--five"></div>
+            </div>
+            <i class="fas fa-star star--one reveal"></i><i class="fas fa-star star--two slidein reveal"></i><i class="fas fa-star star--three slidein reveal"></i><i class="fas fa-star star--four slidein reveal"></i><i class="fas fa-star star--five slidein reveal"></i>
+          </div>
           <div class="fact__text">Client satisfaction and customer retention focused</div>
         </div>
         <div class="fact">
