@@ -220,72 +220,74 @@ html {
 
       &:before {
         transform: scale(1);
+    border-radius: 10px;
       }
 
       &:after {
         border: 1px solid $color3;
       }
-    }
 
-    .service__text {
-      color: white;
-    }
-
-    .service__icon {
-      color: #eee;
-
-      &.website {
-        animation: spin 1.5s linear infinite;
-        transform-origin: left;
+      .service__text {
+        color: $color5;
       }
 
-      &.social {
-        animation: discuss1 2s ease-in 1s infinite;
+      .service__icon {
+        color: $color5;
+
+        &.website {
+          animation: spin 1.5s linear infinite;
+          transform-origin: left;
+        }
+
+        &.social {
+          animation: discuss1 2s ease-in 1s infinite;
+        }
+
+        &.social.second {
+          animation: discuss2 2s ease-out 1s infinite;
+        }
       }
 
-      &.social.second {
-        animation: discuss2 2s ease-out 1s infinite;
+      .left--one {
+        animation: talk 6s ease-in-out infinite;
       }
-    }
 
-    .left--one {
-      animation: talk 6s ease-in-out infinite;
-    }
+      .left--two {
+        animation: talk 6s ease-in-out 2s infinite;
+      }
 
-    .left--two {
-      animation: talk 6s ease-in-out 2s infinite;
-    }
+      .left--three {
+        animation: talk 6s ease-in-out 4s infinite;
+      }
 
-    .left--three {
-      animation: talk 6s ease-in-out 4s infinite;
-    }
+      .right--one {
+        animation: talk 6s ease-in-out 1s infinite;
+      }
 
-    .right--one {
-      animation: talk 6s ease-in-out 1s infinite;
-    }
+      .right--two {
+        animation: talk 6s ease-in-out 3s infinite;
+      }
 
-    .right--two {
-      animation: talk 6s ease-in-out 3s infinite;
-    }
+      .right--three {
+        animation: talk 6s ease-in-out 5s infinite;
+      }
 
-    .right--three {
-      animation: talk 6s ease-in-out 5s infinite;
-    }
+      .red--one {
+        animation: steadyblink 2s infinite;
+      }
 
-    .red--one {
-      animation: steadyblink 2s infinite;
-    }
+      .red--two {
+        animation: fastblink 3s infinite;
+      }
 
-    .red--two {
-      animation: fastblink 3s infinite;
-    }
+      .red--three {
+        animation: slowblink 5s infinite;
+      }
 
-    .red--three {
-      animation: slowblink 5s infinite;
-    }
+      .green {
+        opacity: 1;
+      }
 
-    .green {
-      opacity: 1;
     }
   }
 }
@@ -296,9 +298,7 @@ html {
   left:50%;
   width: 50%;
   padding-top: 50%;
-  transform: translate(-50%, -50%);
-    display: block;
-  // background: rgba($color2, 0.5);  
+  transform: translate(-50%, -50%); 
 
   &:before {
     position: absolute;
@@ -322,6 +322,7 @@ html {
     padding-bottom: 100%;
     border: 1px solid $color1;
     display: block;
+    border-radius: 10px;
   }
 }
 
@@ -369,7 +370,7 @@ html {
   top: 48%;
   transform: translate(-50%, -50%);
   font-size: 0.15em;
-  color: darken($color1, 10%);
+  color: darken($color1, 20%);
   opacity: 0;
 
   &.text--right {
@@ -501,6 +502,7 @@ html {
 }
 
 .fact {
+  position: relative;
   width: 25%;
   height: 15em;
   padding: 4rem;
@@ -529,8 +531,13 @@ html {
     }
 
     .cart {
-      animation: rollout 1s 
+      animation: rollout 1.5s ease-in forwards;
     }
+
+    .fact__gift {
+      animation: falldown 2s ease-out forwards;
+    }
+
   }
 }
 
@@ -565,7 +572,7 @@ html {
   .star--one {  
 
     &.reveal {
-      animation: reveal1 2s cubic-bezier(0.755, -0.040, 0.000, 1.650) ;
+      animation: reveal1 1.5s cubic-bezier(0.755, -0.040, 0.000, 1.650) ;
     }
   }
 
@@ -573,7 +580,7 @@ html {
 
     &.reveal {
       transform: scale(0);
-      animation: reveal2 2s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
+      animation: reveal2 1.5s cubic-bezier(0.755, -0.040, 0.265, 1.510);
     }
   }
 
@@ -581,7 +588,7 @@ html {
 
     &.reveal {
       transform: scale(0);
-      animation: reveal3 2s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
+      animation: reveal3 1.5s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
     }
   }
 
@@ -589,7 +596,7 @@ html {
 
     &.reveal {
       transform: scale(0);
-      animation: reveal4 2s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
+      animation: reveal4 1.5s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
     }
   }
 
@@ -597,7 +604,7 @@ html {
 
     &.reveal {
       transform: scale(0);
-      animation: reveal5 2s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
+      animation: reveal5 1.5s cubic-bezier(0.755, -0.040, 0.265, 1.510) ;
     }
   }
 
@@ -710,9 +717,7 @@ html {
 
 .cart {
     animation: rollin 1s cubic-bezier(0.250, 0.250, 0.215, 0.925) forwards;
-
-  &.rollin {
-  }
+    width: 1.2em;   
 
   &.none {
     animation: none;
@@ -720,9 +725,14 @@ html {
   }
 }
 
-.fact__gift { // WOrk here. Make it fall and roll away!
+.fact__gift {
+  position: absolute;
+  top: -1.6em;
+  left: 50%;
   width: 1.6rem;
   height: 1.6rem;
+  background: brown;
+  transform: rotate(45deg);
 }
 
 .fact__text {
@@ -744,7 +754,6 @@ html {
   .oneofus {
     width: 30%;
     height: 30%;
-    // border: 1px solid black;
 
     img {
       width: 100%;
@@ -867,11 +876,43 @@ html {
 
 @keyframes rollin {
   0%{
-    transform: translateX(-300%) skew(0);
+    transform: translateX(-300%);
   }
 
   100%{
-    transform: translateX(0%) skew(0);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rollout {
+  0%{
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(300%);
+  }
+}
+
+@keyframes falldown {
+  0%{
+    transform: translateY(150%) rotate(45deg);
+  }
+
+  45%{
+    transform: translateY(450%) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(450%) translateX(0%) rotate(45deg);    
+  }
+
+  100%{
+    transform: translateY(450%) translateX(600%) rotate(45deg);
   }
 }
 

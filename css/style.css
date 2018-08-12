@@ -167,39 +167,40 @@ html {
   align-items: center;
   text-align: center; }
   .service__contain .service:hover:before {
-    transform: scale(1); }
+    transform: scale(1);
+    border-radius: 10px; }
   .service__contain .service:hover:after {
     border: 1px solid #FFA237; }
-  .service__contain .service .service__text {
-    color: white; }
-  .service__contain .service .service__icon {
-    color: #eee; }
-    .service__contain .service .service__icon.website {
+  .service__contain .service:hover .service__text {
+    color: #fcfefc; }
+  .service__contain .service:hover .service__icon {
+    color: #fcfefc; }
+    .service__contain .service:hover .service__icon.website {
       animation: spin 1.5s linear infinite;
       transform-origin: left; }
-    .service__contain .service .service__icon.social {
+    .service__contain .service:hover .service__icon.social {
       animation: discuss1 2s ease-in 1s infinite; }
-    .service__contain .service .service__icon.social.second {
+    .service__contain .service:hover .service__icon.social.second {
       animation: discuss2 2s ease-out 1s infinite; }
-  .service__contain .service .left--one {
+  .service__contain .service:hover .left--one {
     animation: talk 6s ease-in-out infinite; }
-  .service__contain .service .left--two {
+  .service__contain .service:hover .left--two {
     animation: talk 6s ease-in-out 2s infinite; }
-  .service__contain .service .left--three {
+  .service__contain .service:hover .left--three {
     animation: talk 6s ease-in-out 4s infinite; }
-  .service__contain .service .right--one {
+  .service__contain .service:hover .right--one {
     animation: talk 6s ease-in-out 1s infinite; }
-  .service__contain .service .right--two {
+  .service__contain .service:hover .right--two {
     animation: talk 6s ease-in-out 3s infinite; }
-  .service__contain .service .right--three {
+  .service__contain .service:hover .right--three {
     animation: talk 6s ease-in-out 5s infinite; }
-  .service__contain .service .red--one {
+  .service__contain .service:hover .red--one {
     animation: steadyblink 2s infinite; }
-  .service__contain .service .red--two {
+  .service__contain .service:hover .red--two {
     animation: fastblink 3s infinite; }
-  .service__contain .service .red--three {
+  .service__contain .service:hover .red--three {
     animation: slowblink 5s infinite; }
-  .service__contain .service .green {
+  .service__contain .service:hover .green {
     opacity: 1; }
 
 .service {
@@ -208,8 +209,7 @@ html {
   left: 50%;
   width: 50%;
   padding-top: 50%;
-  transform: translate(-50%, -50%);
-  display: block; }
+  transform: translate(-50%, -50%); }
   .service:before {
     position: absolute;
     top: 0;
@@ -229,7 +229,8 @@ html {
     width: calc(100% - 1px);
     padding-bottom: 100%;
     border: 1px solid #878787;
-    display: block; }
+    display: block;
+    border-radius: 10px; }
 
 .service__text {
   position: absolute;
@@ -268,7 +269,7 @@ html {
   top: 48%;
   transform: translate(-50%, -50%);
   font-size: 0.15em;
-  color: #6e6e6e;
+  color: #545454;
   opacity: 0; }
   .icon__text.text--right {
     transform: rotateY(180deg) translate(50%, -45%); }
@@ -365,6 +366,7 @@ html {
   justify-content: center; }
 
 .fact {
+  position: relative;
   width: 25%;
   height: 15em;
   padding: 4rem;
@@ -378,7 +380,9 @@ html {
   .fact:hover .signal--lg.blinking {
     animation: signal--lg 1s linear infinite; }
   .fact:hover .cart {
-    animation: rollout 1s; }
+    animation: rollout 1.5s ease-in forwards; }
+  .fact:hover .fact__gift {
+    animation: falldown 2s ease-out forwards; }
 
 .fact__icon {
   position: relative;
@@ -401,19 +405,19 @@ html {
   .fact__icon .fa-star.in {
     transform: scale(1); }
   .fact__icon .star--one.reveal {
-    animation: reveal1 2s cubic-bezier(0.755, -0.04, 0, 1.65); }
+    animation: reveal1 1.5s cubic-bezier(0.755, -0.04, 0, 1.65); }
   .fact__icon .star--two.reveal {
     transform: scale(0);
-    animation: reveal2 2s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
+    animation: reveal2 1.5s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
   .fact__icon .star--three.reveal {
     transform: scale(0);
-    animation: reveal3 2s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
+    animation: reveal3 1.5s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
   .fact__icon .star--four.reveal {
     transform: scale(0);
-    animation: reveal4 2s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
+    animation: reveal4 1.5s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
   .fact__icon .star--five.reveal {
     transform: scale(0);
-    animation: reveal5 2s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
+    animation: reveal5 1.5s cubic-bezier(0.755, -0.04, 0.265, 1.51); }
   .fact__icon .dots {
     position: absolute;
     top: 50%;
@@ -495,14 +499,20 @@ html {
   background: black; }
 
 .cart {
-  animation: rollin 1s cubic-bezier(0.25, 0.25, 0.215, 0.925) forwards; }
+  animation: rollin 1s cubic-bezier(0.25, 0.25, 0.215, 0.925) forwards;
+  width: 1.2em; }
   .cart.none {
     animation: none;
     transform: translateX(-300%); }
 
 .fact__gift {
+  position: absolute;
+  top: -1.6em;
+  left: 50%;
   width: 1.6rem;
-  height: 1.6rem; }
+  height: 1.6rem;
+  background: brown;
+  transform: rotate(45deg); }
 
 .fact__text {
   text-align: center; }
@@ -602,9 +612,27 @@ html {
 
 @keyframes rollin {
   0% {
-    transform: translateX(-300%) skew(0); }
+    transform: translateX(-300%); }
   100% {
-    transform: translateX(0%) skew(0); } }
+    transform: translateX(0%); } }
+
+@keyframes rollout {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(300%); } }
+
+@keyframes falldown {
+  0% {
+    transform: translateY(150%) rotate(45deg); }
+  45% {
+    transform: translateY(450%) rotate(45deg); }
+  50% {
+    transform: translateY(450%) translateX(0%) rotate(45deg); }
+  100% {
+    transform: translateY(450%) translateX(600%) rotate(45deg); } }
 
 @keyframes signal--sm {
   0% {
