@@ -18,7 +18,7 @@
       <div class="nav">
         <div class="topbar">
           <div class="topbar__texts">
-            <div class="topbar__text">Availability: Taking new clients</div>
+            <div class="topbar__text">Availability: <strong>Taking new clients</strong></div>
             <div class="topbar__text">306-590-0147</div>  
             <div class="topbar__text">9am - 6pm</div>
             <div class="topbar__text">estrauss2018@gmail.com</div>
@@ -38,9 +38,10 @@
         </ul>
       </div>
       <div class="hero">
-        <h1 class="hero__text">Tailored.<br/>Responsive.<br />Web Design.</h1>
-        <!-- <h2 class="hero__text--sm">Your one stop shop for all your website needs</h2> -->
-        <div class="hero__button"><button class="services__button">Services</button></div>
+        <div class="hero__text__contain">
+          <h1 class="hero__text">Tailored Responsive Web Design.</h1>
+          <button class="hero__button">Order Today!</button>
+        </div>
         <div class="hero__img"><img src="../images/heroimg.png" alt="A picture of the developers"></div>
       </div>
     </div>
@@ -165,39 +166,53 @@
       </div>
     </div>
     <div id="fact-slice" class="slice">
-      <div class="facts">
-        <div class="fact">
-          <div class="fact__icon stars">
-            <div class="dots">
-              <div class="dot dot--one"></div><div class="dot dot--two"></div><div class="dot dot--three"></div><div class="dot dot--four"></div><div class="dot dot--five"></div>
-            </div>
-            <i class="fas fa-star star--one none"></i><i class="fas fa-star star--two none"></i><i class="fas fa-star star--three none"></i><i class="fas fa-star star--four none"></i><i class="fas fa-star star--five none"></i>
-          </div>
-          <div class="fact__text">Client Satisfaction Guaranteed </div>
-        </div>
-        <div class="fact">
-          <div class="fact__icon">
-            <div class="fact__icon--img"><img class="tower fallin none" src="../images/tower.png" alt="Radio Tower symbolizing SEO and Accessibility" class="tower"></div>
-            <div class="signal signal--sm"></div>
-            <div class="signal signal--lg"></div>
-          </div>
-          <div class="fact__text">SEO & Accessibility Optimized </div>
-        </div>
-        <div class="fact">
-          <div class="fact__icon">
-            <div class="bell__contain">
-              <div class="table"></div>
-              <i class="fas fa-concierge-bell bell none slidein"></i>
+      <div class="facts__contain">
+        <h3 class="title">Modern, Responsibe Web Solutions</h3>
+        <div class="facts">
+          <div class="fact">
+            <div class="fact__contain">
+              <div class="fact__icon stars">
+                <div class="dots">
+                  <div class="dot dot--one"></div><div class="dot dot--two"></div><div class="dot dot--three"></div><div class="dot dot--four"></div><div class="dot dot--five"></div>
+                </div>
+                <i class="fas fa-star star--one none"></i><i class="fas fa-star star--two none"></i><i class="fas fa-star star--three none"></i><i class="fas fa-star star--four none"></i><i class="fas fa-star star--five none"></i>
+              </div>
+              <div class="fact__text">Client Satisfaction Guaranteed </div>
             </div>
           </div>
-          <div class="fact__text">Easy Social Media Integration</div>
-        </div>
-        <div class="fact">
-          <div class="fact__icon">
-            <div class="fact__gift"></div>
-            <img class="cart" src="../images/cart.svg" alt="Shopping Cart icon">
+          <div class="fact">
+            <div class="fact__contain">
+              <div class="fact__icon">
+                <div class="fact__icon--img"><img class="tower fallin none" src="../images/tower.png" alt="Radio Tower symbolizing SEO and Accessibility" class="tower"></div>
+                <div class="signal signal--sm"></div>
+                <div class="signal signal--lg"></div>
+              </div>
+              <div class="fact__text">SEO & Accessibility Optimized </div>
+            </div>
           </div>
-          <div class="fact__text"> E-Commerce Ready Solutions</div>
+          <div class="fact">
+            <div class="fact__contain">
+              <div class="fact__icon">
+                <div class="computer__contain">
+                  <i class="fab fa-facebook-square none social--media facebook"></i>
+                  <i class="fab fa-twitter-square none social--media twitter"></i>
+                  <i class="fab fa-linkedin none social--media linkedin"></i>
+                  <i class="fab fa-dribbble-square none social--media dribbble"></i>
+                  <img class="computer none" src="../images/computer.svg" alt="Shopping Cart icon">
+                </div>
+              </div>
+              <div class="fact__text">Easy Social Media Integration</div>
+            </div>
+          </div>
+          <div class="fact">
+            <div class="fact__contain">
+              <div class="fact__icon">
+                <div class="fact__gift"></div>
+                <img class="cart none" src="../images/cart.svg" alt="Shopping Cart icon">
+              </div>
+              <div class="fact__text"> E-Commerce Ready Solutions</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -222,21 +237,38 @@
       </div>
     </div>
     <div id="testimonial-slice" class="slice">
-      <div class="client">
-        <div class="client__pic"></div>
-        <div class="client__text"></div>
-      </div>
-      <div class="client">
-        <div class="client__pic"></div>
-        <div class="client__text"></div>
-      </div>
-      <div class="client">
-        <div class="client__pic"></div>
-        <div class="client__text"></div>
-      </div>
-      <div class="client">
-        <div class="client__pic"></div>
-        <div class="client__text"></div>
+      <div class="clients__contain">
+        <h3 class="title">Client Testimonials</h3>
+        <div class="clients">
+          <div class="client">
+            <div class="client__pic"></div>
+            <div class="client__info">
+              <div class="client__text">"Paper Street designed the website we needed so we could focus on starting our business!"</div>
+              <div class="client__name">- Malcolm X</div>
+            </div>
+          </div>
+          <div class="client">
+            <div class="client__pic"></div>
+            <div class="client__info">
+              <div class="client__text">"We love the new site and hosting was handled without a hitch! Couldn't be happier!"</div>
+              <div class="client__name">- Malcolm X</div>
+            </div>
+          </div>
+          <div class="client">
+            <div class="client__pic"></div>
+            <div class="client__info">
+              <div class="client__text">"I've had my site hosted with Ethan for over 4 years with numerous changes along the way and my customers still talk about how much they love it!"</div>
+              <div class="client__name">- Malcolm X</div>
+            </div>
+          </div>
+          <div class="client">
+            <div class="client__pic"></div>
+            <div class="client__info">
+              <div class="client__text">"I wasn't great at Social Media, but Paper Street got it all set up and running without a problem!"</div>
+              <div class="client__name">- Malcolm X</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="contact-slice" class="slice">
@@ -244,7 +276,10 @@
     </div>
     <footer id="footer-slice" class="footer-slice">
       <div class="copyright">Copyright © 2018 Paper Street Web Designs</div>
-      <div class="footer__logo"><a href="#top">LOGO</a></div>
+      <div class="footer__logo__contain">
+        <a href="#top"><div class="footer__logo">
+        <div class="footer__direction">[To Top]</div></div></a>
+      </div>
     </footer>
   </div>
 
