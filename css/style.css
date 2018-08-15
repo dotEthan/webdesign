@@ -19,7 +19,7 @@ html {
   position: fixed;
   background: rgba(81, 83, 84, 0.6);
   height: 15vh;
-  width: 100%;
+  width: calc(100vw - (100vw - 100%));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,16 +33,20 @@ html {
 
 .topbar {
   width: 100%;
-  height: 40px;
-  background: #ffa237;
-  color: #777;
+  height: 20px;
+  background: #FFA237;
+  color: #112;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.3rem;
   padding: 0 2%;
   transition: all .5s;
   overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .topbar {
+      height: 40px;
+      font-size: 0.8rem; } }
   .topbar.topbar--scroll {
     height: 0; }
 
@@ -59,8 +63,8 @@ html {
   justify-content: space-around; }
 
 .topbar__social {
-  width: 1.7em;
-  height: 1.7em;
+  width: .7em;
+  height: .7em;
   color: #fcfefc;
   background: transparent;
   font-size: 1.5em;
@@ -70,37 +74,66 @@ html {
   align-items: center;
   justify-content: center;
   margin: 0 10px; }
+  @media screen and (min-width: 768px) {
+    .topbar__social {
+      width: 1.7em;
+      height: 1.7em; } }
   .topbar__social:hover {
     background: rgba(155, 182, 163, 0.6);
     color: #FFA237; }
 
 .logo {
   position: fixed;
-  left: 10%;
-  top: 5%;
-  width: 150px;
-  height: 127px;
-  background: url(../images/logo.png);
+  left: 5%;
+  top: 6%;
+  width: 18.8vw;
+  height: 16vw;
+  background: url(../images/logo.png) no-repeat;
+  background-position: center;
+  background-size: contain;
   transition: all .5s; }
+  @media screen and (min-width: 768px) {
+    .logo {
+      left: 10%;
+      top: 7%;
+      width: 10.6vw;
+      height: auto;
+      padding-top: 9vw;
+      justify-content: center; } }
   .logo.logo--scroll {
     top: 0; }
 
 .nav__items {
   width: 100%;
+  height: 100%;
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 7%; }
+  margin: 0;
+  padding: 0;
+  padding-right: 3%; }
 
 .nav__item {
+  height: 100%;
+  position: relative;
   list-style-type: none;
   margin: 0 3%;
-  color: #fcfefc; }
+  color: #fcfefc;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .nav__item {
+      font-size: 1.3rem; } }
   .nav__item:after {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
     content: '';
-    width: 1em;
-    height: 2px;
+    height: 2px; }
+  .nav__item:hover:after {
     background: #FFA237; }
 
 .hero {
@@ -109,34 +142,47 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 12%;
+  justify-content: flex-start;
+  align-items: center;
   overflow: hidden;
   background: url(../images/heroimg.jpg) no-repeat center center;
   background-size: cover;
-  color: #fcfefc; }
+  color: #fcfefc;
+  padding-top: 20%; }
+  @media screen and (min-width: 768px) {
+    .hero {
+      padding-left: 12%;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 0; } }
 
 .hero__text__contain {
-  width: 25em;
   font-size: 1rem;
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; }
+  align-items: center;
+  padding: 5%;
+  width: 80%; }
   @media screen and (min-width: 768px) {
     .hero__text__contain {
-      font-size: 1.3rem; } }
+      font-size: 1.3rem;
+      width: 25em;
+      margin-top: 10%;
+      align-items: flex-start; } }
 
 .hero__text {
   position: relative;
   width: 100%;
-  padding: 15% 20%;
-  background: rgba(0, 0, 0, 0.5);
   line-height: 1.4em;
   border-radius: 10px 10px 0 10px;
   font-size: 2em;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  color: #fcfefc;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .hero__text {
+      text-align: left; } }
   .hero__text:before {
     content: '';
     position: absolute;
@@ -150,35 +196,50 @@ html {
   h1.hero__text {
     margin-bottom: 0; }
 
-.hero__button {
-  width: 50%;
+.hero__button, .services__button {
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   font-family: "Raleway", sans-serif;
   color: #fcfefc;
-  padding: 15px 25px;
-  border-radius: 0 0 5px 5px; }
-  .hero__button:hover {
-    color: #FFA237;
-    cursor: pointer; }
+  padding: 10px 10px;
+  margin-top: 10%;
+  border-radius: 5px; }
+  .hero__button:hover, .services__button:hover {
+    background: #ea7d00;
+    cursor: pointer;
+    color: #fcfefc; }
+  @media screen and (min-width: 768px) {
+    .hero__button, .services__button {
+      width: 75%; } }
 
 .hero__img {
-  width: 30%;
-  height: auto;
+  width: 40%;
+  height: 35vh;
   position: absolute;
-  right: 15%;
-  bottom: 0; }
+  right: 50%;
+  transform: translate(50%);
+  bottom: 0;
+  display: flex;
+  justify-content: center; }
   .hero__img img {
-    width: 100%; }
+    height: 100%; }
+  @media screen and (min-width: 768px) {
+    .hero__img {
+      right: 10%;
+      transform: none;
+      height: 75vh; } }
 
 .slice {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 5%;
   background: #fcfefc; }
   .slice.slice--two {
     background: #f1faf1; }
+  .slice#portfolio-slice {
+    padding: 5% 0; }
 
 .services__contain {
   width: 100%;
@@ -187,33 +248,45 @@ html {
   font-size: 1.3rem; }
 
 .title {
+  width: 100%;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1em;
   font-family: "Raleway", sans-serif; }
-
-.title__sub {
-  font-size: 0.9em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  width: 50%;
-  margin: 0 auto 1.33em;
-  color: #666;
-  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 1.7em;
+      margin-bottom: 1.7em; } }
 
 .services {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1.33em; }
+  @media screen and (min-width: 768px) {
+    .services {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 80%;
+      margin: 0 auto; } }
 
 .service__contain {
-  width: 33%;
+  width: 100%;
+  height: auto;
   position: relative;
-  padding-top: 20%;
+  padding-top: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center; }
+  .service__contain + .service__contain {
+    margin-top: 50px; }
+  @media screen and (min-width: 768px) {
+    .service__contain {
+      width: 33%;
+      padding-top: 20%; }
+      .service__contain + .service__contain {
+        margin-top: 0px; } }
   .service__contain .service:hover:before {
     transform: scale(1);
     border-radius: 10px; }
@@ -257,7 +330,8 @@ html {
   left: 50%;
   width: 50%;
   padding-top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
   .service:before {
     position: absolute;
     top: 0;
@@ -282,27 +356,35 @@ html {
 
 .service__text {
   position: absolute;
-  bottom: 28%;
+  bottom: 10%;
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-family: "Raleway", sans-serif; }
+  @media screen and (min-width: 768px) {
+    .service__text {
+      bottom: 20%;
+      font-size: 0.8em; } }
 
 .service__icon__contain {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 100%; }
+  padding-top: 100%;
+  font-size: 5rem; }
+  @media screen and (min-width: 768px) {
+    .service__icon__contain {
+      font-size: 5rem; } }
 
 .service__icon {
-  font-size: 5rem;
+  font-size: 1em;
   position: absolute;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
   color: #FFA237; }
   .service__icon.social {
-    font-size: 4rem;
+    font-size: .7em;
     left: 35%;
     top: 36%; }
     .service__icon.social.second {
@@ -323,7 +405,7 @@ html {
 
 .server__row {
   position: absolute;
-  right: 13%;
+  right: 12.5%;
   display: flex;
   justify-content: space-between;
   width: 19%; }
@@ -345,6 +427,28 @@ html {
   .light.green {
     background: #5ace00; }
 
+.title__sub {
+  font-size: 0.7em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  width: 90%;
+  margin: 2.33em auto;
+  color: #666;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .title__sub {
+      font-size: 1em;
+      width: 50%;
+      margin: 2.33em auto; } }
+
+.services__button {
+  width: 80%;
+  margin: 0 auto 25px; }
+  @media screen and (min-width: 768px) {
+    .services__button {
+      font-size: 1em;
+      width: 15%; } }
+
 .portfolio__contain {
   width: 100%;
   display: flex;
@@ -353,18 +457,24 @@ html {
 .portfolio__items {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; }
+  flex-direction: row;
+  margin: 2% 0; }
 
 .portfolio__item {
   position: relative;
-  width: 25%;
+  width: 90%;
   height: auto;
   display: flex;
   justify-content: center;
   transform: scale(0.95);
   transition: all .5s ease-in-out;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .portfolio__item {
+      width: 25%;
+      margin: none; } }
   .portfolio__item img {
     width: 100%;
     height: 100%;
@@ -409,20 +519,26 @@ html {
 .facts {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .facts {
+      flex-direction: row; } }
 
 .fact {
   position: relative;
-  width: 25%;
+  width: 250px;
   min-width: 250px;
-  height: 15em;
-  padding: 4rem;
+  height: 200px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1280px) {
     .fact {
-      min-width: 350px; } }
+      min-width: 300px;
+      min-height: 250px; } }
   .fact .fact__contain {
     width: 100%;
     height: 100%;
@@ -457,11 +573,14 @@ html {
   overflow: hidden;
   flex: 1; }
   .fact__icon.stars {
-    font-size: 1.6em;
+    font-size: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #FFA237; }
+    @media screen and (min-width: 1280px) {
+      .fact__icon.stars {
+        font-size: 1.6em; } }
   .fact__icon .fa-star {
     filter: drop-shadow(1px 2px 1px #000);
     transform: scale(0); }
@@ -584,13 +703,17 @@ html {
 .fact__text {
   text-align: center; }
 
+.whois {
+  display: flex;
+  flex-direction: column; }
+
 .us__contain {
   width: 100%;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .left {
-  width: 50%;
-  height: 500px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -599,35 +722,59 @@ html {
     height: 30%; }
     .left .oneofus img {
       width: 100%; }
+  @media screen and (min-width: 768px) {
+    .left {
+      width: 50%; } }
 
 .right {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 1.3rem;
+  font-size: .7rem;
   padding-left: 6%; }
-  .right .us__text {
-    width: 85%;
-    font-size: 1.3em; }
+  @media screen and (min-width: 768px) {
+    .right {
+      width: 50%;
+      font-size: 1.3rem; } }
+
+.us__contact {
+  padding: 10%;
+  text-align: center; }
+
+.us__text {
+  width: 100%;
+  font-size: 1.2em; }
 
 .clients {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .clients {
+      flex-direction: row; } }
 
 .client {
-  width: 20%;
+  width: 100%;
   padding: 1%;
   font-size: 1em;
-  transform: scale(0.7);
+  transform: scale(0.8);
   transition: all .3s ease-in-out; }
+  @media screen and (min-width: 768px) {
+    .client {
+      width: 20%; } }
   .client:hover {
     transform: scale(1);
     cursor: pointer; }
+
+.client__pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px; }
 
 .client__text {
   color: #666;

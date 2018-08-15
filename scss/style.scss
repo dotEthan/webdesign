@@ -34,7 +34,7 @@ html {
   position: fixed;
   background: rgba($color2, .6);
   height: 15vh;
-  width: 100%;
+  width: calc(100vw - (100vw - 100%));
   display: flex; 
   flex-direction: column;
   justify-content: space-between;
@@ -51,16 +51,21 @@ html {
 
 .topbar {
   width: 100%;
-  height: 40px;
-  background: lighten($color3, 0%);
-  color: #777;
+  height: 20px;
+  background: $color3;
+  color: #112; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.3rem;
   padding: 0 2%;
   transition: all .5s;
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 40px;
+    font-size: 0.8rem;
+  }
 
   &.topbar--scroll {
     height: 0;
@@ -83,8 +88,8 @@ html {
 }
 
 .topbar__social {
-  width: 1.7em;
-  height: 1.7em;
+  width: .7em;
+  height: .7em;
   color: $color5;
   background: transparent;
   font-size: 1.5em;
@@ -95,6 +100,11 @@ html {
   justify-content: center;
   margin: 0 10px;
 
+  @media screen and (min-width: 768px) {
+    width: 1.7em;
+    height: 1.7em;
+  }
+
   &:hover {
     background: rgba($color4,.6);
     color: $color3;
@@ -103,12 +113,23 @@ html {
 
 .logo {
   position: fixed;
-  left: 10%;
-  top: 5%;
-  width: 150px;
-  height: 127px;
-  background: url(../images/logo.png);
+  left: 5%;
+  top: 6%;
+  width: 18.8vw;
+  height: 16vw;
+  background: url(../images/logo.png) no-repeat;
+  background-position: center;
+  background-size: contain;
   transition: all .5s;
+
+  @media screen and (min-width: 768px) {
+    left: 10%;
+    top: 7%;
+    width: 10.6vw;
+    height: auto;
+    padding-top: 9vw;
+    justify-content: center;
+  }
 
   &.logo--scroll {
     top:0;
@@ -117,23 +138,44 @@ html {
 
 .nav__items {
   width: 100%;
+  height: 100%;
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 7%;
+  margin: 0;
+  padding: 0;
+  padding-right: 3%;
 }
 
 .nav__item {
+  height: 100%;
+  position: relative;
   list-style-type: none;
   margin: 0 3%;
   color: $color5;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
 
   &:after {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
     content: '';
-    width: 1em;
     height: 2px;
-    background: $color3;
+  }
+
+  &:hover {
+
+    &:after {
+      background: $color3;
+    }
   }
 }
 
@@ -143,37 +185,52 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 12%;
+  justify-content: flex-start;
+  align-items: center;
   overflow: hidden;
   background: url(../images/heroimg.jpg) no-repeat center center;
   background-size: cover;
   color: $color5;
+  padding-top: 20%;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 12%;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0;
+  }
 }
 
 .hero__text__contain {
-  width: 25em;
   font-size: 1rem;
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  padding: 5%;
+  width: 80%;
 
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;
+    width: 25em;
+    margin-top: 10%;
+    align-items: flex-start;
   }
 }
 
 .hero__text {
   position: relative;
   width: 100%;
-  padding: 15% 20%;
-  background: rgba(0,0,0,0.5);
   line-height: 1.4em;
   border-radius: 10px 10px 0 10px;
   font-size: 2em;
   font-family: $headline-font;
+  color: $color5;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 
   &:before {
     content: '';
@@ -195,29 +252,44 @@ html {
 }
 
 .hero__button {
-  width: 50%;
+  width: 60%;
   background-color: rgba(0,0,0,0.5);
   border: none;
   font-family: $headline-font;
   color: $color5;
-  padding: 15px 25px;
-  border-radius: 0 0 5px 5px;
+  padding: 10px 10px;
+  margin-top: 10%;
+  border-radius: 5px;
 
   &:hover {
-    color: $color3;
+    background: darken($color3,15%);
     cursor: pointer;
+    color: $color5;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 75%;
   }
 }
 
 .hero__img {
-  width: 30%;
-  height: auto;
+  width: 40%;
+  height: 35vh;
   position: absolute;
-  right: 15%;
+  right: 50%;
+  transform: translate(50%);
   bottom: 0;
+  display: flex;
+  justify-content: center;
 
   img {
-    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    right: 10%;
+    transform: none;
+    height: 75vh;
   }
 }
 
@@ -225,11 +297,15 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 5%;
   background: $color5;
 
   &.slice--two {
     background: darken($color5, 3%);
+  }
+
+  &#portfolio-slice {
+    padding: 5% 0;
   }
 }
 
@@ -241,37 +317,55 @@ html {
 }
 
 .title {
+  width: 100%;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1em;
   font-family: $headline-font;
 
-}
+  @media screen and (min-width: 768px) {
+    font-size: 1.7em;
+    margin-bottom: 1.7em;
+  }
 
-.title__sub {
-  font-size: 0.9em;
-  font-family: $regular-font;
-  font-weight: normal;
-  width: 50%;
-  margin: 0 auto 1.33em;
-  color: $color1;
-  text-align: center;
 }
 
 .services {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1.33em;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .service__contain {
-  width: 33%;
+  width: 100%;
+  height: auto;
   position: relative;
-  padding-top: 20%;
+  padding-top: 55%;
   display: flex; 
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  & + & {
+    margin-top: 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 33%;
+    padding-top: 20%;
+
+    & + & {
+      margin-top: 0px;
+    }
+  }
 
   .service {
 
@@ -357,7 +451,8 @@ html {
   left:50%;
   width: 50%;
   padding-top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
+  cursor: pointer; 
 
   &:before {
     position: absolute;
@@ -387,10 +482,15 @@ html {
 
 .service__text {
   position: absolute;
-  bottom: 28%;
+  bottom: 10%;
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-family: $headline-font;
+
+  @media screen and (min-width: 768px) {
+    bottom: 20%;
+    font-size: 0.8em;
+  }
 }
 
 .service__icon__contain {
@@ -399,10 +499,15 @@ html {
   left: 0;
   width: 100%;
   padding-top: 100%;
+  font-size: 5rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5rem;
+  }
 }
 
 .service__icon {
-  font-size: 5rem;
+  font-size: 1em;
   position: absolute;
   left: 50%;
   top: 40%;
@@ -410,7 +515,7 @@ html {
   color: $color3;
 
   &.social {
-    font-size: 4rem;
+    font-size: .7em;
     left: 35%;
     top: 36%;
 
@@ -428,7 +533,6 @@ html {
   top: 48%;
   transform: translate(-50%, -50%);
   font-size: 0.18em;
-  // font-weight: bold;
   color: white;
   opacity: 0;
 
@@ -440,7 +544,7 @@ html {
 
 .server__row {
   position: absolute;
-  right: 13%;
+  right: 12.5%;
   display: flex;
   justify-content: space-between;
   width: 19%;
@@ -477,6 +581,33 @@ html {
   }
 }
 
+.title__sub {
+  font-size: 0.7em;
+  font-family: $regular-font;
+  font-weight: normal;
+  width: 90%;
+  margin: 2.33em auto;
+  color: $color1;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1em;
+    width: 50%;
+    margin: 2.33em auto;
+  }
+}
+
+.services__button {
+  @extend .hero__button;
+  width: 80%;
+  margin: 0 auto 25px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1em;
+    width: 15%;
+  }
+}
+
 .portfolio__contain {
   width: 100%;
   display: flex;
@@ -487,11 +618,12 @@ html {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin: 2% 0;
 }
 
 .portfolio__item {
   position: relative;
-  width: 25%; 
+  width: 90%; 
   height: auto; 
   display: flex;
   justify-content: center;
@@ -499,6 +631,12 @@ html {
   transition: all .5s ease-in-out;
   box-shadow: 2px 4px 8px rgba(0,0,0, .5);
   border-radius: 10px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 25%; 
+    margin: none;
+  }
 
   img {
     width: 100%;
@@ -559,20 +697,27 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .fact {
   position: relative;
-  width: 25%;
+  width: 250px;
   min-width: 250px;
-  height: 15em;
-  padding: 4rem;
+  height: 200px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (min-width: 1366px) {
-    min-width: 350px;
+  @media screen and (min-width: 1280px) {
+    min-width: 300px;
+    min-height: 250px;
   }
 
   .fact__contain {
@@ -659,11 +804,15 @@ html {
   flex: 1;
 
   &.stars {
-    font-size: 1.6em;
+    font-size: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: $color3;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 1.6em;
+    }
   }
 
   .fa-star{
@@ -856,14 +1005,19 @@ html {
   text-align: center;
 }
 
+.whois {
+  display: flex;
+  flex-direction: column;
+}
+
 .us__contain {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left {
-  width: 50%;
-  height: 500px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -876,21 +1030,35 @@ html {
       width: 100%;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 }
 
 .right {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 1.3rem;
+  font-size: .7rem;
   padding-left: 6%;
 
-  .us__text {
-    width: 85%;
-    font-size: 1.3em;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  font-size: 1.3rem;
   }
+}
+
+.us__contact {
+  padding: 10%;
+  text-align: center;
+}
+
+.us__text {
+  width: 100%;
+  font-size: 1.2em;
 }
 
 .clients {
@@ -899,19 +1067,35 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+    flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .client {
-  width: 20%;
+  width: 100%;
   padding: 1%;
   font-size: 1em;
-  transform: scale(.7);
+  transform: scale(.8);
   transition: all .3s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    width: 20%;
+  }
 
   &:hover {
     transform: scale(1);
     cursor: pointer;
   }
+}
+
+.client__pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+
 }
 
 .client__text {
