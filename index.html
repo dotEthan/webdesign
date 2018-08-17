@@ -171,46 +171,54 @@
       <div class="facts__contain">
         <h3 class="title">Modern, Responsive Web Solutions</h3>
         <div class="facts">
-          <div class="fact">
-            <div class="fact__contain">
-              <div class="fact__icon stars">
-                <div class="dots">
-                  <div class="dot dot--one"></div><div class="dot dot--two"></div><div class="dot dot--three"></div><div class="dot dot--four"></div><div class="dot dot--five"></div>
+          <div class="fact__words">
+            <div class="fact">
+              <div class="fact__contain">
+                <div class="fact__icon stars">
+                  <div class="dots">
+                    <div class="dot dot--one"></div><div class="dot dot--two"></div><div class="dot dot--three"></div><div class="dot dot--four"></div><div class="dot dot--five"></div>
+                  </div>
+                  <i class="fas fa-star star--one none"></i><i class="fas fa-star star--two none"></i><i class="fas fa-star star--three none"></i><i class="fas fa-star star--four none"></i><i class="fas fa-star star--five none"></i>
                 </div>
-                <i class="fas fa-star star--one none"></i><i class="fas fa-star star--two none"></i><i class="fas fa-star star--three none"></i><i class="fas fa-star star--four none"></i><i class="fas fa-star star--five none"></i>
               </div>
               <div class="fact__text">Client Satisfaction Guaranteed </div>
             </div>
           </div>
-          <div class="fact">
-            <div class="fact__contain">
-              <div class="fact__icon">
-                <div class="fact__icon--img"><img class="tower fallin none" src="../images/tower.png" alt="Radio Tower symbolizing SEO and Accessibility" class="tower"></div>
-                <div class="signal signal--sm"></div>
-                <div class="signal signal--lg"></div>
+          <div class="fact__words">
+            <div class="fact">
+              <div class="fact__contain">
+                <div class="fact__icon">
+                  <img class="wifi" src="../images/wifi.svg" alt="wifi icon">
+                  <img class="wifi--hover hover" src="../images/wifihover.png" alt="wifi hovering icon">
+                  <img class="wifi--hover hover1" src="../images/wifihover1.png" alt="wifi hovering icon">
+                  <img class="wifi--hover hover2" src="../images/wifihover2.png" alt="wifi hovering icon">
+                  <img class="wifi--hover hover3" src="../images/wifihover3.png" alt="wifi hovering icon">
+                </div>
               </div>
               <div class="fact__text">SEO & Accessibility Optimized </div>
             </div>
           </div>
-          <div class="fact">
-            <div class="fact__contain">
-              <div class="fact__icon">
-                <div class="computer__contain">
-                  <i class="fab fa-facebook-square none social--media facebook"></i>
-                  <i class="fab fa-twitter-square none social--media twitter"></i>
-                  <i class="fab fa-linkedin none social--media linkedin"></i>
-                  <i class="fab fa-dribbble-square none social--media dribbble"></i>
-                  <img class="computer none" src="../images/computer.svg" alt="Shopping Cart icon">
+          <div class="fact__words">
+            <div class="fact">
+              <div class="fact__contain">
+                <div class="fact__icon">
+                  <img class="computer none" src="../images/monitor.svg" alt="Monitor icon">
+                  <i class="fab fa-facebook-square social--media facebook none"></i>
+                  <i class="fab fa-twitter-square social--media twitter none"></i>
+                  <i class="fab fa-linkedin social--media linkedin none"></i>
+                  <i class="fab fa-dribbble social--media dribbble none"></i>
                 </div>
               </div>
               <div class="fact__text">Easy Social Media Integration</div>
             </div>
           </div>
-          <div class="fact">
-            <div class="fact__contain">
-              <div class="fact__icon">
-                <div class="fact__gift"></div>
-                <img class="cart none" src="../images/cart.svg" alt="Shopping Cart icon">
+          <div class="fact__words">
+            <div class="fact">
+              <div class="fact__contain">
+                <div class="fact__icon">
+                  <div class="fact__gift"></div>
+                  <img class="cart none" src="../images/cart.svg" alt="Shopping Cart icon">
+                </div>
               </div>
               <div class="fact__text"> E-Commerce Ready Solutions</div>
             </div>
@@ -272,8 +280,67 @@
         </div>
       </div>
     </div>
-    <div id="contact-slice" class="slice--two">
-      
+    <div id="contact-slice" class="slice slice--two">
+      <span id="contactanchor" class="anchor"></span>
+      <div id="contactform">
+        <form id="inquiryform"> 
+          <div id="titlereturn">
+            <h1 class="title">Contact Form</h1>
+            <p id="returnmessage">Only hit send ONCE. Once complete, this message will change.</p>
+          </div>
+          <div class="form__contain">
+            <div class="form__row form--first">
+              <div class="contact__info">
+                <label for="name"> <span class="required">*</span> Name:</label>
+                <input type="text" id="name" placeholder="Name" required="required" />
+              </div>
+              <div class="contact__info">
+                <label for="email"><span class="required">*</span> Email:</label>
+                <input type="text" id="email" placeholder="Email" required="required" />
+              </div>
+              <div class="contact__info">
+                <label for="phone">Contact No:</label>
+                <input type="text" id="phone" placeholder="10 digit Mobile no."/>
+              </div>
+            </div>
+            <div class="form__row form--second">
+              <div class="contact__info">
+                <label for="website">Previous Website:</label>
+                <input type="text" id="website" placeholder="If none, ignore."/>
+              </div>
+              <div class="contact__info">
+                <label for="budget">Budget:</label>
+                <select id="budget">
+                  <option value="under 1000">Under $1000</option>
+                  <option value="$800-$3000">$1000 - $3000</option>
+                  <option value="$3000-$5000">$3000 - $5000</option>
+                  <option value="$5000-$15000">$5000 - $15000</option>
+                  <option value="over 5000">Over $15000</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row form--third">
+              <div class="contact__info checkbox">
+                <input type="checkbox" class="check" id="website--check">
+                <label for="website--check">Website Development</label>
+              </div>
+              <div class="contact__info checkbox">
+                <input type="checkbox" class="check" id="seo--check">
+                <label for="seo--check">SEO or Social Media</label>
+              </div>
+              <div class="contact__info checkbox">
+                <input type="checkbox" class="check" id="hosting--check">
+                <label for="hosting--check">Hosting</label>
+              </div>
+            </div>
+          </div>
+          <div id="contactmessage">
+            <label for="inquiry"><span class="required">*</span> Message:</label>
+            <textarea id="inquiry" placeholder="Message......."></textarea>
+            <button type="submit" id="submit" value="Send Message"/>Send Message</button> 
+          </div>
+        </form>
+      </div>
     </div>
     <footer id="footer-slice" class="footer-slice">
       <div class="copyright">Copyright © 2018 Paper Street Web Designs</div>
@@ -284,8 +351,12 @@
     </footer>
   </div>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> 
   <script  src="js/script.js"></script>
 
 </body>
 
 </html>
+
+
+
