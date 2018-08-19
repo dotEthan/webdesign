@@ -8,6 +8,7 @@
   <title>Paper Street Web Designs</title>
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 
   
@@ -33,17 +34,20 @@
         </div>
         <div class="logo"></div>
         <ul class="nav__items">
-          <li class="nav__item">Home</li>
-          <li class="nav__item">Services</li>
-          <li class="nav__item">Contact Us</li>
+          <li class="nav__item"><a href="#top">Home</a></li>
+          <li class="nav__item"><a href="#services-slice">Services</a></li>
+          <li class="nav__item"><a href="#contact-slice">Contact Us</a></li>
         </ul>
       </div>
       <div class="hero">
         <div class="hero__text__contain">
-          <h1 class="hero__text">Tailored Responsive Web Design.</h1>
-          <button class="hero__button">Order Today!</button>
+          <h1 class="hero__text">TAILORED <span class="emphasis">RESPONSIVE</span> WEB DESIGN</h1>
+          <div class="hero__sell">Paper Street Web Designs is an Etobicoke based design firm founded by a group of developers and designers with over 20 years of industry experience. Specializing in small businesses and entrepreneurial ventures, Paper Street remains focused on helping their clients succeed in chasing their dreams.</div>
+          <div class="hero__button">
+            <button class="roll"><span class="button__text">Free Quote</span></button>
+          </div>
         </div>
-        <div class="hero__img"><img src="../images/heroimg.png" alt="A picture of the developers"></div>
+        <!-- <div class="hero__img"><img src="../images/heroimg.png" alt="A picture of the developers"></div> -->
       </div>
     </div>
     <div id="services-slice" class="slice">
@@ -101,10 +105,36 @@
           </div>
         </div>
         <h4 class="title__sub">Whatever your need, Paper Street is here to help.</h4>
-        <button class="services__button">Get Your Quote Today!</button>
+        <div class="services__button">
+          <button class="roll"><span class="button__text">Order Today</span></button>
+        </div>
       </div>
     </div>
     <div id="portfolio-slice" class="slice slice--two">
+      <div class="portfolio__over enlarge--freggie__over">
+        <div class="close"></div>
+        <div class="over__image">
+          <img src="http://www.ethanstrauss.com/images/freggiesmpage.jpg" alt="Freggie Page Image">
+        </div>
+      </div>
+      <div class="portfolio__over enlarge--uffda__over">
+        <div class="close"></div>
+        <div class="over__image">
+          <img src="http://www.ethanstrauss.com/images/freggiesmpage.jpg" alt="Uffda Page Image">
+        </div>
+      </div>
+      <div class="portfolio__over enlarge--ethan__over">
+        <div class="close"></div>
+        <div class="over__image">
+          <img src="http://www.ethanstrauss.com/images/freggiesmpage.jpg" alt=".ethan Page Image">
+        </div>
+      </div>
+      <div class="portfolio__over enlarge--cannabisoils__over">
+        <div class="close"></div>
+        <div class="over__image">
+          <img src="http://www.ethanstrauss.com/images/freggiesmpage.jpg" alt="Cannabis Oils Page Image">
+        </div>
+      </div>
       <div class="portfolio__contain">
         <h3 class="title">Current Clients</h3>
         <div class="portfolio__items">
@@ -112,28 +142,28 @@
             <img src="../images/portfolio1.jpg" alt="Freggie Portfolio Image" class="portfolio__image">
             <div class="item--over">
               <div class="item__link"><i class="fas fa-link"></i></div>
-              <div class="item__enlarge"><i class="fas fa-search-plus"></i></div>
+              <div class="item__enlarge enlarge--freggie"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
           <div class="portfolio__item">
             <img src="../images/portfolio2.jpg" alt="Uffda Soap Portfolio Image" class="portfolio__image">
             <div class="item--over">
               <div class="item__link"><i class="fas fa-link"></i></div>
-              <div class="item__enlarge"><i class="fas fa-search-plus"></i></div>
+              <div class="item__enlarge enlarge--uffda"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
           <div class="portfolio__item">
             <img src="../images/portfolio3.jpg" alt=".ethan Portfolio Image" class="portfolio__image">
             <div class="item--over">
               <div class="item__link"><i class="fas fa-link"></i></div>
-              <div class="item__enlarge"><i class="fas fa-search-plus"></i></div>
+              <div class="item__enlarge enlarge--ethan"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
           <div class="portfolio__item">
             <img src="../images/portfolio1.jpg" alt="" class="portfolio__image">
             <div class="item--over">
               <div class="item__link"><i class="fas fa-link"></i></div>
-              <div class="item__enlarge"><i class="fas fa-search-plus"></i></div>
+              <div class="item__enlarge enlarge--cannabisoils"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
           <div class="portfolio__item">
@@ -243,7 +273,9 @@
               <div class="us__text">
                 With over 20 years of web development experience, our team of designers and developers will help bring your dreams to life. 
               </div>
-              <button class="contact__button">Contact Us Today</button>
+              <div class="aboutus__button">
+                <button class="roll"><span class="button__text">Contact Us Today</span></button>
+              </div>
             </div>
           </div>
         </div>
@@ -254,27 +286,24 @@
         <h3 class="title">Client Testimonials</h3>
         <div class="clients">
           <div class="client">
-            <div class="client__pic"><img src="../images/client1.jpg" alt="picture of Charles and Sigrid"></div>
+            <div class="client__pic pic1"></div>
             <div class="client__info">
               <div class="client__text">"We love the new site and hosting was handled without a hitch! Couldn't be happier!"</div>
-              <div class="client__name">- Charles & Sigrid Bjarnason</div>
-              <div class="client__url">http://www.cannabisoils.ca</div>
+              <div class="client__name">- Marcus Reginald</div>
             </div>
           </div>
           <div class="client">
-            <div class="client__pic"><img src="../images/client2.jpg" alt="picture of Charles and Sigrid"></div>
+            <div class="client__pic pic2"></div>
             <div class="client__info">
-              <div class="client__text">"I had my site built and hosted with Ethan 3 years ago and have never had a problem."</div>
-              <div class="client__name">- Laura Dahl</div>
-              <div class="client__url">http://www.uffdasoap.com</div>
+              <div class="client__text">"I had my site built and hosted with Ethan 3 years ago, the only time I have to think about it is when I get notifications of updates."</div>
+              <div class="client__name">- Sarah Wilson</div>
             </div>
           </div>
           <div class="client">
-            <div class="client__pic"><img src="../images/client3.jpg" alt="picture of Meagan"></div>
+            <div class="client__pic pic3"></div>
             <div class="client__info">
               <div class="client__text">"I'm not a tech person, but Paper Street got the site and social media all set up and running without a problem!"</div>
-              <div class="client__name">- Meagan Tucker</div>
-              <div class="client__url">Under Going Rebuild</div>
+              <div class="client__name">- Susan Li</div>
             </div>
           </div>
         </div>
@@ -305,8 +334,16 @@
             </div>
             <div class="form__row form--second">
               <div class="contact__info">
-                <label for="website">Previous Website:</label>
+                <label for="website">Current Website:</label>
                 <input type="text" id="website" placeholder="If none, ignore."/>
+              </div>
+              <div class="contact__info">
+                <label for="budget">What Do You Need:</label>
+                <select id="budget">
+                  <option value="under 1000">Website Development</option>
+                  <option value="$800-$3000">SEO or Social Media</option>
+                  <option value="$3000-$5000">Hosting</option>
+                </select>
               </div>
               <div class="contact__info">
                 <label for="budget">Budget:</label>
@@ -319,25 +356,13 @@
                 </select>
               </div>
             </div>
-            <div class="form__row form--third">
-              <div class="contact__info checkbox">
-                <input type="checkbox" class="check" id="website--check">
-                <label for="website--check">Website Development</label>
-              </div>
-              <div class="contact__info checkbox">
-                <input type="checkbox" class="check" id="seo--check">
-                <label for="seo--check">SEO or Social Media</label>
-              </div>
-              <div class="contact__info checkbox">
-                <input type="checkbox" class="check" id="hosting--check">
-                <label for="hosting--check">Hosting</label>
-              </div>
-            </div>
           </div>
           <div id="contactmessage">
             <label for="inquiry"><span class="required">*</span> Message:</label>
             <textarea id="inquiry" placeholder="Message......."></textarea>
-            <button type="submit" id="submit" value="Send Message"/>Send Message</button> 
+            <div class="submit__button">
+              <button type="submit" id="submit" class="roll" value="Send Message"/>Send Message</button> 
+            </div>
           </div>
         </form>
       </div>

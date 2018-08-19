@@ -143,3 +143,27 @@ $('#submit').click(function(e) {
 		e.preventDefault();
 	}
 });
+
+$('.close').click(portfolioClose);
+
+function portfolioClose() {
+	this.parentElement.classList.remove('visible');
+}
+
+$('.item__enlarge').click(portfolioOpen);
+
+function portfolioOpen() {
+	const name = this.classList[1] + '__over';
+
+	if (
+		!$(`.${name}`).hasClass('visible') &&
+		$('.portfolio__over').hasClass('visible')
+	) {
+		$('.portfolio__over').removeClass('visible');
+		$(`.${name}`).addClass('visible');
+	} else if ($(`.${name}`).hasClass('visible')) {
+		$(`.${name}`).removeClass('visible');
+	} else {
+		$(`.${name}`).addClass('visible');
+	}
+}
