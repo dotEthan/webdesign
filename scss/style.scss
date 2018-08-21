@@ -19,6 +19,10 @@ html {
   color: #010;
 }
 
+a {
+  text-decoration: none;
+}
+
 .contain {
   font-size: 1.3rem;
 }
@@ -105,8 +109,7 @@ html {
   }
 
   &:hover {
-    background: rgba(#0c793d, 0.6);
-    color: $color3;
+    background: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -260,17 +263,15 @@ html {
     color: $color3;
     margin: 0 25px;
 
-    &:hover {
-      &:after {
-        content: '';
-        width: 80%;
-        height: 3px;
-        background: $color3;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    &:after {
+      content: '';
+      width: 80%;
+      height: 3px;
+      background: $color3;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -279,6 +280,7 @@ html {
   width: 75%;
   font-size: 1.1rem;
   margin: 4em 0;
+  line-height: 1.6rem;
 }
 
 .hero__button {
@@ -290,7 +292,6 @@ html {
     background-color: rgba(0, 0, 0, 0.8);
     border: none;
     font-family: 'Raleway', sans-serif;
-    color: #fcfefc;
     padding: 0.3em 0.3em;
     border-radius: 0.4em;
     line-height: 2.5em;
@@ -326,6 +327,7 @@ html {
       display: block;
       position: relative;
       font-size: 0.9em;
+      color: $color5;
     }
   }
 }
@@ -662,7 +664,6 @@ html {
   width: 50%;
   padding-top: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
 
   &:before {
     position: absolute;
@@ -1419,6 +1420,7 @@ html {
   bottom: 0;
   text-align: center;
   font-size: 1.6vw;
+  line-height: 2vw;
 }
 
 .whois {
@@ -1479,6 +1481,7 @@ html {
 .us__text {
   width: 100%;
   font-size: 1.2em;
+  line-height: 1.3em;
 
   @media screen and (min-width: 768px) {
     text-align: left;
@@ -1576,6 +1579,7 @@ html {
 .client__text {
   color: $color1;
   font-style: italic;
+  line-height: 1.6rem;
 }
 
 .client__name {
@@ -1710,6 +1714,10 @@ html {
   @media screen and (min-width: 768px) {
     margin: 25px auto 0;
   }
+
+  #submit {
+    color: $color5;
+  }
 }
 
 .footer-slice {
@@ -1746,34 +1754,6 @@ html {
       opacity: 1;
     }
   }
-}
-
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: rgba(0, 0, 0, 0.6);
-}
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-}
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: rgba(0, 0, 0, 0.6);
-}
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: rgba(0, 0, 0, 0.6);
-}
-
-::placeholder {
-  /* Most modern browsers support this now. */
-  color: rgba(0, 0, 0, 0.6);
 }
 
 @keyframes reveal1 {
