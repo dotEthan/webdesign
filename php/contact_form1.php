@@ -11,9 +11,7 @@ $email = $_POST['email1'];
 $inquiry = $_POST['inquiry1'];
 $website = $_POST['website1'];
 $budget = $_POST['budget1'];
-$websiteCheck = $_POST['websiteCheck1'];
-$seoCheck = $_POST['seoCheck1'];
-$hostingCheck = $_POST['hostingCheck1'];
+$need = $_POST['need1'];
 
 $email = filter_var($email, FILTER_SANITIZE_EMAIL); // Sanitizing E-mail.
 // After sanitization Validation is performed
@@ -30,9 +28,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     Phone #: $phone
     Previous Website: $website
     budget: $budget
-    websiteCheck: $websiteCheck
-    seoCheck: $seoCheck
-    hostingCheck: $hostingCheck
+    Need: $need
 
     Comments:
     $inquiry

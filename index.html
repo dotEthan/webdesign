@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paper Street Web Designs</title>
+  <title>Custom Web Sites by Paper Street Web Designs</title>
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -20,9 +20,9 @@
       <div class="nav">
         <div class="topbar">
           <div class="topbar__texts">
-            <div class="topbar__text">Availability: <strong>Taking new clients</strong></div>
+            <div class="topbar__text mobile">Availability: <strong>Taking new clients</strong></div>
             <div class="topbar__text">306-590-0147</div>  
-            <div class="topbar__text">9am - 6pm</div>
+            <div class="topbar__text mobile">9am - 6pm</div>
             <div class="topbar__text">estrauss2018@gmail.com</div>
           </div>
           <div class="topbar__socials">
@@ -41,10 +41,12 @@
       </div>
       <div class="hero">
         <div class="hero__text__contain">
-          <h1 class="hero__text">TAILORED <span class="emphasis">RESPONSIVE</span> WEB DESIGN</h1>
+          <div class="hero__text">TAILORED</div> 
+          <div class="hero__text emphasis">RESPONSIVE</div> 
+          <div class="hero__text">WEB DESIGN</div>
           <div class="hero__sell">Paper Street Web Designs is an Etobicoke based design firm founded by a group of developers and designers with over 20 years of industry experience. Specializing in small businesses and entrepreneurial ventures, Paper Street remains focused on helping their clients succeed in chasing their dreams.</div>
           <div class="hero__button">
-            <button class="roll"><a href="#contact-slice"><span class="button__text">Free Quote</span></a></button>
+            <a href="#contact-slice"><button class="roll"><span class="button__text">Free Quote</span></button></a>
           </div>
         </div>
       </div>
@@ -105,7 +107,7 @@
         </div>
         <h4 class="title__sub">Whatever your need, Paper Street is here to help.</h4>
         <div class="services__button">
-          <button class="roll"><a href="#contact-slice"><span class="button__text">Order Today</span></a></button>
+          <a href="#contact-slice"><button class="roll"><span class="button__text">Order Today</span></button></a>
         </div>
       </div>
     </div>
@@ -147,14 +149,14 @@
           <div class="portfolio__item">
             <img src="../images/portfolio2.jpg" alt="Uffda Soap Portfolio Image" class="portfolio__image">
             <div class="item--over">
-              <div class="item__link"><i class="fas fa-link"></i></div>
+              <div class="item__link"><a href="http://www.uffdasoap.ca"><i class="fas fa-link"></i></a></div>
               <div class="item__enlarge enlarge--uffda"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
           <div class="portfolio__item">
             <img src="../images/portfolio3.jpg" alt=".ethan Portfolio Image" class="portfolio__image">
             <div class="item--over">
-              <div class="item__link"><i class="fas fa-link"></i></div>
+              <div class="item__link"><a href="http://www.uffdasoaps.com"><i class="fas fa-link"></i></a></div>
               <div class="item__enlarge enlarge--ethan"><i class="fas fa-search-plus"></i></div>
             </div>
           </div>
@@ -245,7 +247,7 @@
                 With over 20 years of web development experience, our team of designers and developers will help bring your dreams to life. 
               </div>
               <div class="aboutus__button">
-                <button class="roll"><a href="#contact-slice"><span class="button__text">Contact Us Today</span></a></button>
+                <a href="#contact-slice"><button class="roll"><span class="button__text">Contact Us Today</span></button></a>
               </div>
             </div>
           </div>
@@ -283,11 +285,11 @@
     <div id="contact-slice" class="slice slice--two">
       <span id="contactanchor" class="anchor"></span>
       <div id="contactform">
+        <div id="titlereturn">
+          <h1 class="title">Contact Form</h1>
+          <p id="returnmessage">Only hit send ONCE. Once complete, this message will change.</p>
+        </div>
         <form id="inquiryform"> 
-          <div id="titlereturn">
-            <h1 class="title">Contact Form</h1>
-            <p id="returnmessage">Only hit send ONCE. Once complete, this message will change.</p>
-          </div>
           <div class="form__contain">
             <div class="form__row form--first">
               <div class="contact__info">
@@ -309,8 +311,8 @@
                 <input type="text" id="website" placeholder="If none, ignore."/>
               </div>
               <div class="contact__info">
-                <label for="budget">What Do You Need:</label>
-                <select id="budget">
+                <label for="need">What Do You Need:</label>
+                <select id="need">
                   <option value="under 1000">Website Development</option>
                   <option value="$800-$3000">SEO or Social Media</option>
                   <option value="$3000-$5000">Hosting</option>
@@ -329,10 +331,10 @@
             </div>
           </div>
           <div id="contactmessage">
-            <label for="inquiry"><span class="required">*</span> Message:</label>
+            <label for="inquiry" class="message__label"><span class="required">*</span> Message:</label>
             <textarea id="inquiry" placeholder="Message......."></textarea>
             <div class="submit__button">
-              <button type="submit" id="submit" class="roll" value="Send Message"/>Send Message</button> 
+              <button type="submit" id="submit" class="roll" value="Send Message"/><span class="button__text">Send Message</span></button> 
             </div>
           </div>
         </form>

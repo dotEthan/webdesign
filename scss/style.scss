@@ -25,11 +25,12 @@ a {
 
 .contain {
   font-size: 1.3rem;
+  overflow: hidden;
 }
 
 .splash {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -53,7 +54,7 @@ a {
 }
 
 .topbar {
-  width: 100%;
+  width: 100vw;
   height: 20px;
   background: $color3;
   color: #112;
@@ -83,6 +84,14 @@ a {
 
 .topbar__text {
   margin: 0 10px;
+
+  &.mobile {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
 }
 
 .topbar__socials {
@@ -160,13 +169,13 @@ a {
   display: flex;
   align-items: center;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
   }
 
   &:after {
@@ -197,10 +206,9 @@ a {
   background: url(../images/heroimg.jpg) no-repeat center center;
   background-size: cover;
   color: $color5;
-  padding-top: 20%;
+  padding-top: 20vh;
 
   @media screen and (min-width: 768px) {
-    // padding-left: 12%;
     justify-content: center;
     align-items: center;
     padding-top: 0;
@@ -215,92 +223,99 @@ a {
   justify-content: center;
   align-items: center;
   padding: 5%;
-  width: 80%;
+  width: 75%;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;
     width: 100%;
     margin-top: 10%;
     align-items: center;
-    text-align: center;
   }
 }
 
 .hero__text {
   position: relative;
   width: 100%;
-  line-height: 1.4em;
+  line-height: 1.7em;
   border-radius: 10px 10px 0 10px;
-  font-size: 2em;
+  font-size: 1.3em;
   font-family: $headline-font;
   color: $color5;
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    // text-align: left;
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px 10px 0 10px;
-    z-index: -1;
+  @media screen and (min-width: 1200px) {
+    font-size: 1.7em;
   }
 
-  @at-root {
-    h1#{&} {
-      margin-bottom: 0;
-    }
-  }
-
-  .emphasis {
+  &.emphasis {
     position: relative;
     color: $color3;
     margin: 0 25px;
 
     &:after {
       content: '';
-      width: 80%;
-      height: 3px;
+      width: 40%;
+      height: 2px;
       background: $color3;
       position: absolute;
-      bottom: -5px;
+      bottom: 0px;
       left: 50%;
       transform: translateX(-50%);
+
+      @media screen and (min-width: 768px) {
+        width: 15%;
+      }
     }
   }
 }
 
 .hero__sell {
   width: 75%;
-  font-size: 1.1rem;
+  font-size: 0.5em;
   margin: 4em 0;
-  line-height: 1.6rem;
+  line-height: 1.4em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 0.7em;
+  }
+
+  @media screen and (min-width: 1024px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
 }
 
 .hero__button {
-  width: 60%;
-
   .roll {
     position: relative;
-    width: 9em;
     background-color: rgba(0, 0, 0, 0.8);
     border: none;
     font-family: 'Raleway', sans-serif;
-    padding: 0.3em 0.3em;
+    padding: 0 1.3em;
     border-radius: 0.4em;
-    line-height: 2.5em;
+    line-height: 2em;
     overflow: hidden;
     cursor: pointer;
 
+    @media screen and (min-width: 768px) {
+      line-height: 2.2em;
+    }
+
+    @media screen and (min-width: 1200px) {
+      line-height: 2.5em;
+    }
+
     &:hover {
       &:before {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(-25%, 0, 0);
       }
 
       .button__text {
@@ -316,7 +331,7 @@ a {
       right: 0;
       top: 0;
       bottom: 0;
-      width: 150%;
+      width: 250%;
       background: $color3;
       transform: translate3d(-100%, 0, 0);
       transition: all 0.5s ease-out;
@@ -326,7 +341,7 @@ a {
     .button__text {
       display: block;
       position: relative;
-      font-size: 0.9em;
+      font-size: 0.9rem;
       color: $color5;
     }
   }
@@ -337,8 +352,12 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 5%;
   background: $color5;
+  padding: 15% 10%;
+
+  @media screen and (min-width: 768px) {
+    padding: 5%;
+  }
 
   &.slice--two {
     background: #eee;
@@ -362,16 +381,14 @@ a {
   font-size: 1em;
   font-family: $headline-font;
 
-  &:after {
-    content: '';
-    width: 25px;
-    height: 4px;
-    border-radius: 50%;
+  @media screen and (min-width: 768px) {
+    font-size: 1.5em;
+    margin-bottom: 1em;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     font-size: 1.7em;
-    margin-bottom: 1.7em;
+    margin-bottom: 1em;
   }
 }
 
@@ -698,7 +715,12 @@ a {
   font-size: 0.6em;
   font-family: $headline-font;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    bottom: 13%;
+    font-size: 0.7em;
+  }
+
+  @media screen and (min-width: 1600px) {
     bottom: 20%;
     font-size: 0.8em;
   }
@@ -718,22 +740,49 @@ a {
 }
 
 .service__icon {
-  font-size: 1em;
+  font-size: 0.8em;
   position: absolute;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  color: $color3;
+  color: $color2;
+
+  @media screen and (min-width: 768px) {
+    font-size: 0.9em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1em;
+  }
 
   &.social {
-    font-size: 0.7em;
-    left: 35%;
-    top: 36%;
+    font-size: 0.5em;
+    left: 33%;
+    top: 27%;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 0.7em;
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 0.7em;
+      left: 35%;
+      top: 36%;
+    }
 
     &.second {
-      right: 35%;
-      top: 40%;
+      right: 33%;
+      top: 52%;
       transform: rotateY(180deg) translate(-50%, -50%);
+
+      @media screen and (min-width: 768px) {
+        top: 44%;
+      }
+
+      @media screen and (min-width: 1600px) {
+        right: 35%;
+        top: 40%;
+      }
     }
   }
 }
@@ -760,15 +809,15 @@ a {
   width: 19%;
 
   &.row--one {
-    top: 21%;
+    top: 16%;
   }
 
   &.row--two {
-    top: 48%;
+    top: 47%;
   }
 
   &.row--three {
-    top: 75%;
+    top: 77%;
   }
 }
 
@@ -798,6 +847,12 @@ a {
   text-align: center;
 
   @media screen and (min-width: 768px) {
+    font-size: 0.8em;
+    width: 50%;
+    margin: 2.33em auto;
+  }
+
+  @media screen and (min-width: 1200px) {
     font-size: 1em;
     width: 50%;
     margin: 2.33em auto;
@@ -806,7 +861,6 @@ a {
 
 .services__button {
   @extend .hero__button;
-  width: 80%;
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
@@ -947,15 +1001,21 @@ a {
       transform: scale(1);
       cursor: pointer;
       background: $color3;
-      border: 3px solid $color5;
+      border: 3px solid $color1;
 
       &:hover {
         transform: scale(1.2);
+        border: 3px solid $color5;
       }
     }
 
     .portfolio__info {
       opacity: 1;
+    }
+
+    .fa-search-plus,
+    .fa-link {
+      color: $color2;
     }
   }
 }
@@ -989,20 +1049,30 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+.fact__words {
+  width: 50%;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
+    width: auto;
   }
 }
 
 .fact {
   position: relative;
-  font-size: 5vw;
+  // font-size: 15vw;
   padding: 1vw;
   width: 20vw;
-  padding-top: 20vw;
+  padding-top: 15vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 
   .fact__contain {
     position: absolute;
@@ -1014,10 +1084,12 @@ a {
     justify-content: center;
     overflow: hidden;
     align-items: center;
+    margin-bottom: 5vw;
 
     &:hover {
       .fa-star.spin {
         animation: starspin 1.5s linear infinite reverse;
+        color: $color3;
 
         @keyframes starspin {
           0% {
@@ -1230,9 +1302,9 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: $color3;
+    color: black;
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       font-size: 3vw;
     }
   }
@@ -1439,6 +1511,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 2em;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin-top: 0;
+  }
 
   .oneofus {
     width: 30%;
@@ -1448,16 +1526,12 @@ a {
       width: 100%;
     }
   }
-
-  @media screen and (min-width: 768px) {
-    width: 50%;
-  }
 }
 
 .right {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   font-size: 0.7rem;
@@ -1465,7 +1539,14 @@ a {
 
   @media screen and (min-width: 768px) {
     width: 50%;
+    font-size: 0.9rem;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
     font-size: 1.3rem;
+    flex-direction: column;
   }
 }
 
@@ -1490,9 +1571,10 @@ a {
 
 .aboutus__button {
   @extend .hero__button;
+  margin-top: 1em;
 
-  @media screen and (min-width: 768px) {
-    margin: 50px 0 0 0;
+  .button__text {
+    line-height: 2.5rem;
   }
 }
 
@@ -1503,6 +1585,7 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  margin: 1em 0;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -1510,7 +1593,7 @@ a {
 }
 
 .client {
-  width: 100%;
+  width: 80%;
   padding: 1%;
   font-size: 1em;
   transform: scale(0.8);
@@ -1541,6 +1624,11 @@ a {
         border-radius: 50%;
       }
     }
+
+    .client__text,
+    .client__name {
+      color: black;
+    }
   }
 }
 
@@ -1549,9 +1637,15 @@ a {
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
-  width: 10em;
-  height: 10em;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    width: 10em;
+    height: 10em;
+    font-size: 1rem;
+  }
 
   &.pic1 {
     background: url('../images/testi.jpg');
@@ -1573,7 +1667,15 @@ a {
 }
 
 .client__info {
-  margin-top: 1em;
+  font-size: 1rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: 1300px) {
+    font-size: 1.3rem;
+  }
 }
 
 .client__text {
@@ -1594,12 +1696,36 @@ a {
 
 #returnmessage {
   width: 80%;
-  margin: 0 auto;
-  font-size: 0.8em;
+  margin: 1.5em auto 0;
+  font-size: 0.6em;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     width: 30%;
+    font-size: 0.8em;
+    text-align: left;
   }
+}
+
+#inquiryform {
+  font-size: 0.95rem;
+
+  // ::-webkit-input-placeholder {
+  //   /* Chrome/Opera/Safari */
+  //   color: pink;
+  // }
+  // ::-moz-placeholder {
+  //   /* Firefox 19+ */
+  //   color: pink;
+  // }
+  // :-ms-input-placeholder {
+  //   /* IE 10+ */
+  //   color: pink;
+  // }
+  // :-moz-placeholder {
+  //   /* Firefox 18- */
+  //   color: pink;
+  // }
 }
 
 .form__contain {
@@ -1662,10 +1788,14 @@ a {
 
 .contact__info {
   position: relative;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 3% 0;
+
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
 
   label {
     margin-bottom: 5%;
@@ -1690,11 +1820,15 @@ a {
 
 #contactmessage {
   position: relative;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 
   label {
     position: relative;
@@ -1707,16 +1841,16 @@ a {
   }
 }
 
+.message__label {
+  padding-left: 3%;
+}
+
 .submit__button {
   @extend .hero__button;
   width: auto;
 
   @media screen and (min-width: 768px) {
     margin: 25px auto 0;
-  }
-
-  #submit {
-    color: $color5;
   }
 }
 
@@ -1737,6 +1871,18 @@ a {
   width: 100%;
   text-align: center;
   opacity: 0;
+}
+
+.copyright {
+  font-size: 0.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 0.9rem;
+  }
 }
 
 .footer__logo {
