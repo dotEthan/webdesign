@@ -142,7 +142,7 @@ a {
     top: 65%;
     left: 0;
     right: 0;
-    content: '';
+    content: "";
     height: 2px; }
   .nav__item:hover:after {
     background: #ffa237; }
@@ -204,7 +204,7 @@ a {
     color: #ffa237;
     margin: 0 25px; }
     .hero__text.emphasis:after {
-      content: '';
+      content: "";
       width: 40%;
       height: 2px;
       background: #ffa237;
@@ -232,7 +232,7 @@ a {
   position: relative;
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding: 0 1.3em;
   border-radius: 0.4em;
   line-height: 2em;
@@ -250,7 +250,7 @@ a {
     color: #444;
     font-weight: bold; }
   .hero__button .roll:before, .services__button .roll:before, .aboutus__button .roll:before, .submit__button .roll:before {
-    content: '';
+    content: "";
     position: absolute;
     left: -10%;
     right: 0;
@@ -301,6 +301,8 @@ a {
     .title {
       font-size: 1.7em;
       margin-bottom: 1em; } }
+  .title.hidden {
+    display: none; }
 
 .services {
   width: 100%;
@@ -492,7 +494,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    content: ' ';
+    content: " ";
     transform: scale(0);
     background: #ffa237;
     width: 100%;
@@ -503,7 +505,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    content: ' ';
+    content: " ";
     width: calc(100% - 1px);
     padding-bottom: 100%;
     border: 1px solid #666;
@@ -634,33 +636,95 @@ a {
       font-size: 1em;
       width: auto; } }
 
+.portfolio__contain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.portfolio__over__contain {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.portfolio__overs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center; }
+
 .portfolio__over {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  z-index: 99;
-  transition: all 0.3s linear; }
-  .portfolio__over.enlarge--freggie__over {
-    transform: translate(-140%, -60%) scale(0); }
+  width: 90%;
+  transition: all 0.3s linear;
+  transform: translate3d(-50%, 0%, 0) scale(0);
+  z-index: 99; }
+  @media screen and (min-width: 768px) {
+    .portfolio__over {
+      width: 25%;
+      transform: translate3d(0%, -20%, 0) scale(0);
+      left: 0%;
+      top: 30%; } }
+  .portfolio__over.enlarge--freggie__over.visible {
+    transform: translate3d(-50%, 0%, 0) scale(1); }
+    @media screen and (min-width: 768px) {
+      .portfolio__over.enlarge--freggie__over.visible {
+        transform: translate3d(81%, -40%, 0) scale(1); } }
   .portfolio__over.enlarge--uffda__over {
-    transform: translate(-75%, -60%) scale(0); }
+    top: 15%; }
+    @media screen and (min-width: 768px) {
+      .portfolio__over.enlarge--uffda__over {
+        left: 25%;
+        top: 30%; } }
+    .portfolio__over.enlarge--uffda__over.visible {
+      transform: translate3d(-50%, 0, 0) scale(1); }
+      @media screen and (min-width: 768px) {
+        .portfolio__over.enlarge--uffda__over.visible {
+          transform: translate3d(16%, -40%, 0) scale(1); } }
   .portfolio__over.enlarge--ethan__over {
-    transform: translate(-10%, -60%) scale(0); }
+    top: 50%;
+    top: 30%; }
+    @media screen and (min-width: 768px) {
+      .portfolio__over.enlarge--ethan__over {
+        left: 50%; } }
+    .portfolio__over.enlarge--ethan__over.visible {
+      transform: translate3d(-50%, -20%, 0) scale(1); }
+      @media screen and (min-width: 768px) {
+        .portfolio__over.enlarge--ethan__over.visible {
+          transform: translate3d(-51%, -40%, 0) scale(1); } }
   .portfolio__over.enlarge--cannabisoils__over {
-    transform: translate(55%, -60%) scale(0); }
-  .portfolio__over.visible {
-    transform: translate(-50%, -50%) scale(1); }
+    top: 75%;
+    top: 30%; }
+    @media screen and (min-width: 768px) {
+      .portfolio__over.enlarge--cannabisoils__over {
+        left: 75%; } }
+    .portfolio__over.enlarge--cannabisoils__over.visible {
+      transform: translate3d(-50%, -20%, 0) scale(1); }
+      @media screen and (min-width: 768px) {
+        .portfolio__over.enlarge--cannabisoils__over.visible {
+          transform: translate3d(-116%, -40%, 0) scale(1); } }
+  @media screen and (min-width: 768px) {
+    .portfolio__over.visible {
+      width: 38%; } }
 
 .close {
   position: absolute;
   right: 8%;
   top: 5%;
-  width: 2vw;
-  height: 2vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   background: #fcfefc;
   cursor: pointer;
   border: 1px solid #515354; }
+  @media screen and (min-width: 768px) {
+    .close {
+      width: 2vw;
+      height: 2vw; } }
   .close:hover {
     border: 2px solid #ffa237; }
   .close:before {
@@ -668,7 +732,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    content: '';
+    content: "";
     width: 50%;
     height: 3px;
     border-radius: 1px;
@@ -678,7 +742,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    content: '';
+    content: "";
     width: 50%;
     height: 3px;
     border-radius: 1px;
@@ -694,11 +758,6 @@ a {
   width: 30%;
   background: red;
   height: 100%; }
-
-.portfolio__contain {
-  width: 100%;
-  display: flex;
-  flex-direction: column; }
 
 .portfolio__items {
   display: flex;
@@ -719,8 +778,7 @@ a {
   margin: 0 auto; }
   @media screen and (min-width: 768px) {
     .portfolio__item {
-      width: 25%;
-      margin: none; } }
+      width: 25%; } }
   .portfolio__item img {
     width: 100%;
     height: 100%;
@@ -1153,7 +1211,7 @@ a {
         position: absolute;
         left: -5%;
         top: -5%;
-        content: '';
+        content: "";
         width: 110%;
         height: 110%;
         background: #ffa237;
@@ -1257,7 +1315,7 @@ a {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      content: '';
+      content: "";
       width: 2px;
       height: 50%;
       background: #ffa237; } }

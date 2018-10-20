@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
 
 $color1: #666;
 $color2: #515354;
@@ -6,8 +6,8 @@ $color3: #ffa237;
 $color4: #9bb6a3;
 $color5: #fcfefc;
 
-$headline-font: 'Raleway', sans-serif;
-$regular-font: 'Open Sans', sans-serif;
+$headline-font: "Raleway", sans-serif;
+$regular-font: "Open Sans", sans-serif;
 
 * {
   box-sizing: border-box;
@@ -183,7 +183,7 @@ a {
     top: 65%;
     left: 0;
     right: 0;
-    content: '';
+    content: "";
     height: 2px;
   }
 
@@ -259,7 +259,7 @@ a {
     margin: 0 25px;
 
     &:after {
-      content: '';
+      content: "";
       width: 40%;
       height: 2px;
       background: $color3;
@@ -298,7 +298,7 @@ a {
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     border: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     padding: 0 1.3em;
     border-radius: 0.4em;
     line-height: 2em;
@@ -325,7 +325,7 @@ a {
     }
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: -10%;
       right: 0;
@@ -389,6 +389,10 @@ a {
   @media screen and (min-width: 1200px) {
     font-size: 1.7em;
     margin-bottom: 1em;
+  }
+
+  &.hidden {
+    display: none;
   }
 }
 
@@ -686,7 +690,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    content: ' ';
+    content: " ";
     transform: scale(0);
     background: $color3;
     width: 100%;
@@ -699,7 +703,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    content: ' ';
+    content: " ";
     width: calc(100% - 1px);
     padding-bottom: 100%;
     border: 1px solid $color1;
@@ -869,31 +873,108 @@ a {
   }
 }
 
+.portfolio__contain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.portfolio__over__contain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__overs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
 .portfolio__over {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  z-index: 99;
+  width: 90%;
   transition: all 0.3s linear;
+  transform: translate3d(-50%, 0%, 0) scale(0);
+  z-index: 99;
+
+  @media screen and (min-width: 768px) {
+    width: 25%;
+    transform: translate3d(0%, -20%, 0) scale(0);
+    left: 0%;
+    top: 30%;
+  }
 
   &.enlarge--freggie__over {
-    transform: translate(-140%, -60%) scale(0);
+    &.visible {
+      transform: translate3d(-50%, 0%, 0) scale(1);
+
+      @media screen and (min-width: 768px) {
+        transform: translate3d(81%, -40%, 0) scale(1);
+      }
+    }
   }
 
   &.enlarge--uffda__over {
-    transform: translate(-75%, -60%) scale(0);
+    top: 15%;
+
+    @media screen and (min-width: 768px) {
+      left: 25%;
+      top: 30%;
+    }
+    &.visible {
+      transform: translate3d(-50%, 0, 0) scale(1);
+
+      @media screen and (min-width: 768px) {
+        transform: translate3d(16%, -40%, 0) scale(1);
+      }
+    }
   }
 
   &.enlarge--ethan__over {
-    transform: translate(-10%, -60%) scale(0);
+    top: 50%;
+    top: 30%;
+
+    @media screen and (min-width: 768px) {
+      left: 50%;
+    }
+
+    &.visible {
+      transform: translate3d(-50%, -20%, 0) scale(1);
+
+      @media screen and (min-width: 768px) {
+        transform: translate3d(-51%, -40%, 0) scale(1);
+      }
+    }
   }
 
   &.enlarge--cannabisoils__over {
-    transform: translate(55%, -60%) scale(0);
+    top: 75%;
+    top: 30%;
+
+    @media screen and (min-width: 768px) {
+      left: 75%;
+    }
+
+    &.visible {
+      transform: translate3d(-50%, -20%, 0) scale(1);
+
+      @media screen and (min-width: 768px) {
+        transform: translate3d(-116%, -40%, 0) scale(1);
+      }
+    }
   }
 
   &.visible {
-    transform: translate(-50%, -50%) scale(1);
+    @media screen and (min-width: 768px) {
+      width: 38%;
+    }
   }
 }
 
@@ -901,12 +982,17 @@ a {
   position: absolute;
   right: 8%;
   top: 5%;
-  width: 2vw;
-  height: 2vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   background: $color5;
   cursor: pointer;
   border: 1px solid $color2;
+
+  @media screen and (min-width: 768px) {
+    width: 2vw;
+    height: 2vw;
+  }
 
   &:hover {
     border: 2px solid $color3;
@@ -917,7 +1003,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    content: '';
+    content: "";
     width: 50%;
     height: 3px;
     border-radius: 1px;
@@ -929,7 +1015,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    content: '';
+    content: "";
     width: 50%;
     height: 3px;
     border-radius: 1px;
@@ -950,12 +1036,6 @@ a {
   width: 30%;
   background: red;
   height: 100%;
-}
-
-.portfolio__contain {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .portfolio__items {
@@ -979,7 +1059,6 @@ a {
 
   @media screen and (min-width: 768px) {
     width: 25%;
-    margin: none;
   }
 
   img {
@@ -1616,7 +1695,7 @@ a {
         position: absolute;
         left: -5%;
         top: -5%;
-        content: '';
+        content: "";
         width: 110%;
         height: 110%;
         background: $color3;
@@ -1648,19 +1727,19 @@ a {
   }
 
   &.pic1 {
-    background: url('../images/testi.jpg');
+    background: url("../images/testi.jpg");
     background-position: center;
     background-size: cover;
   }
 
   &.pic2 {
-    background: url('../images/testi2.jpg');
+    background: url("../images/testi2.jpg");
     background-position: center;
     background-size: cover;
   }
 
   &.pic3 {
-    background: url('../images/testi3.jpg');
+    background: url("../images/testi3.jpg");
     background-position: center;
     background-size: cover;
   }
@@ -1773,7 +1852,7 @@ a {
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        content: '';
+        content: "";
         width: 2px;
         height: 50%;
         background: $color3;
