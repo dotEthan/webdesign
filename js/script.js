@@ -59,7 +59,7 @@ window.onload = function event() {
 
     if (PortfolioTop <= -30) {
       if (cart.classList.contains("none"))
-        setTimeout(function() {
+        setTimeout(function () {
           cartSwap();
         }, 1000);
 
@@ -81,7 +81,7 @@ window.onload = function event() {
       }
 
       if (stars[0].classList.contains("reveal"))
-        setTimeout(function() {
+        setTimeout(function () {
           swap();
         }, 2000);
     }
@@ -94,7 +94,7 @@ window.onload = function event() {
 // Contact Form
 //------------------------
 
-$("#submit").click(function(e) {
+$("#submit").click(function (e) {
   const fname = $("#name").val();
   const phone = $("#phone").val();
   const email = $("#email").val();
@@ -103,11 +103,7 @@ $("#submit").click(function(e) {
   const budget = $("#budget").val();
   const need = $("need").val();
 
-  // let websiteCheck = (websiteIsChecked) ? 'true' : 'false';
-  // let seoCheck = ($(seoIsChecked).is(':clicked')) ? 'true' : 'false';
-  // let hostingCheck = (hostingIsChecked) ? 'true' : 'false';
   $("#returnmessage").empty(); // To empty previous error/success message.
-  // console.log($('#website--check').is(':clicked'));
   // Checking for blank fields
   if (fname == "" || email == "" || inquiry == "") {
     alert("Please Fill Required Fields");
@@ -125,7 +121,7 @@ $("#submit").click(function(e) {
         budget1: budget,
         need1: need
       },
-      function(data) {
+      function (data) {
         $("#returnmessage").append(data); // Append returned message to message paragraph.
 
         if (data == "Your Query has been received, We will contact you soon.") {
@@ -149,7 +145,7 @@ $(".item__enlarge").click(portfolioOpen);
 
 function portfolioOpen() {
   const name = this.classList[1] + "__over";
-
+  console.log(name);
   if (
     !$(`.${name}`).hasClass("visible") &&
     $(".portfolio__over").hasClass("visible")
@@ -165,7 +161,7 @@ function portfolioOpen() {
 
 // Close Portfolio Overlays with Esc
 
-document.onkeydown = function(evt) {
+document.onkeydown = function (evt) {
   evt = evt || window.event;
   var isEscape = false;
   if ("key" in evt) {

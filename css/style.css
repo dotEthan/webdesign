@@ -666,9 +666,9 @@ a {
   @media screen and (min-width: 768px) {
     .portfolio__over {
       width: 25%;
-      transform: translate3d(0%, -20%, 0) scale(0);
+      transform: translate3d(-10%, -20%, 0) scale(0);
       left: 0%;
-      top: 30%; } }
+      top: 20%; } }
   .portfolio__over.enlarge--freggie__over.visible {
     transform: translate3d(-50%, 0%, 0) scale(1); }
     @media screen and (min-width: 768px) {
@@ -678,34 +678,34 @@ a {
     top: 15%; }
     @media screen and (min-width: 768px) {
       .portfolio__over.enlarge--uffda__over {
-        left: 25%;
-        top: 30%; } }
+        left: 27%;
+        top: 20%; } }
     .portfolio__over.enlarge--uffda__over.visible {
       transform: translate3d(-50%, 0, 0) scale(1); }
       @media screen and (min-width: 768px) {
         .portfolio__over.enlarge--uffda__over.visible {
           transform: translate3d(16%, -40%, 0) scale(1); } }
   .portfolio__over.enlarge--ethan__over {
-    top: 50%;
-    top: 30%; }
+    top: 50%; }
     @media screen and (min-width: 768px) {
       .portfolio__over.enlarge--ethan__over {
-        left: 50%; } }
+        left: 52%;
+        top: 20%; } }
     .portfolio__over.enlarge--ethan__over.visible {
       transform: translate3d(-50%, -20%, 0) scale(1); }
       @media screen and (min-width: 768px) {
         .portfolio__over.enlarge--ethan__over.visible {
           transform: translate3d(-51%, -40%, 0) scale(1); } }
-  .portfolio__over.enlarge--cannabisoils__over {
-    top: 75%;
-    top: 30%; }
+  .portfolio__over.enlarge--portfolio__over {
+    top: 75%; }
     @media screen and (min-width: 768px) {
-      .portfolio__over.enlarge--cannabisoils__over {
-        left: 75%; } }
-    .portfolio__over.enlarge--cannabisoils__over.visible {
+      .portfolio__over.enlarge--portfolio__over {
+        left: 78%;
+        top: 20%; } }
+    .portfolio__over.enlarge--portfolio__over.visible {
       transform: translate3d(-50%, -20%, 0) scale(1); }
       @media screen and (min-width: 768px) {
-        .portfolio__over.enlarge--cannabisoils__over.visible {
+        .portfolio__over.enlarge--portfolio__over.visible {
           transform: translate3d(-116%, -40%, 0) scale(1); } }
   @media screen and (min-width: 768px) {
     .portfolio__over.visible {

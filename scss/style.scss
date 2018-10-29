@@ -4,7 +4,7 @@ $color1: #666;
 $color2: #515354;
 $color3: #ffa237;
 $color4: #9bb6a3;
-$color5: #fcfefc;
+$color5: #fcfefc; 
 
 $headline-font: "Raleway", sans-serif;
 $regular-font: "Open Sans", sans-serif;
@@ -13,7 +13,7 @@ $regular-font: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
-html {
+html { 
   font-size: 16px;
   font-family: $regular-font;
   color: #010;
@@ -906,9 +906,9 @@ a {
 
   @media screen and (min-width: 768px) {
     width: 25%;
-    transform: translate3d(0%, -20%, 0) scale(0);
+    transform: translate3d(-10%, -20%, 0) scale(0);
     left: 0%;
-    top: 30%;
+    top: 20%;
   }
 
   &.enlarge--freggie__over {
@@ -925,8 +925,8 @@ a {
     top: 15%;
 
     @media screen and (min-width: 768px) {
-      left: 25%;
-      top: 30%;
+      left: 27%;
+      top: 20%;
     }
     &.visible {
       transform: translate3d(-50%, 0, 0) scale(1);
@@ -939,10 +939,10 @@ a {
 
   &.enlarge--ethan__over {
     top: 50%;
-    top: 30%;
 
     @media screen and (min-width: 768px) {
-      left: 50%;
+      left: 52%;
+      top: 20%;
     }
 
     &.visible {
@@ -954,12 +954,12 @@ a {
     }
   }
 
-  &.enlarge--cannabisoils__over {
+  &.enlarge--portfolio__over {
     top: 75%;
-    top: 30%;
 
     @media screen and (min-width: 768px) {
-      left: 75%;
+      left: 78%;
+      top: 20%;
     }
 
     &.visible {
