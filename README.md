@@ -1,5 +1,5 @@
 # Portfolio Site
-[Paper Street Web Designs](http://paperstreetwebdesigns.ca/)
+[Paper Street Web Designs](http://ethanstrauss.com/paperstreetwebdesigns)
 
 I wanted to fill out my portfolio with different themes, I also wanted to work with the CSS3 Animations and Transforms.
 
